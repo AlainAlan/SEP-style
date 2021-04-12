@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           斯坦福哲学百科全书styler
+@namespace      https://github.com/AlainAlan/SEP-style/
+@version        0.0.1
+@description    A new userstyle
+@author         Alain
+==/UserStyle== */
+@-moz-document domain("stanford.edu") {
+	/* 斯坦福哲学百科所有页面 */
+	.serif {
+		font-family: "Palatino Linotype", serif;
+	}
+	.sansserif {
+		font-family: "DFKai-SB";
+	}
+	/* 题头改好了 */
+	#text {
+		font-family: "Palatino Linotype";
+	}
+	body {
+		font-family: "Palatino Linotype";
+	}
+
+	/* 导航栏 */
+	.nav-collapse,
+	.navbar,
+	.btn-navbar {
+		font-family: "Palatino Linotype";
+	}
+	/* 导航栏按钮 */
+	#navigation button.btn-navbar {
+		font-family: "Palatino Linotype";
+	}
+
+	/* 搜索栏 */
+	#search-switch {
+		font-family: "Palatino Linotype", Arial, sans-serif;
+	}
+	#search input[type="search"] {
+		font-family: "Palatino Linotype", sans-serif;
+	}
+	#article-sidebar {
+		font-family: "Palatino Linotype";
+	}
+	/* 词条内容 */
+	#article-content,
+	#style_guide_content,
+	#style_guide_content_wide {
+		font-family: "Palatino Linotype";
+		font-size: 21px;
+		line-height: 1.8em;
+	}
+	/* 文章目录等 */
+	#article-content h2,
+	#article-content h3,
+	#style_guide_content h1,
+	#style_guide_content h2,
+	#style_guide_content h3,
+	#style_guide_content_wide h1,
+	#style_guide_content_wide h2,
+	#style_guide_content_wide h3 {
+		font-family: "Palatino Linotype";
+	}
+
+	#article-content h1 {
+		font-family: "Copperplate Gothic";
+	}
+	/* 网站题头 */
+	#site-title,
+	.homepage #site-title {
+		font-family: "Old English Text MT", Arial, sans-serif;
+	}
+
+	li {
+		line-height: 1.3em;
+		font-family: Georgia;
+	}
+}
