@@ -1,6 +1,13 @@
 # SEP-style
 Stanford Encyclopedia of Philosophy user css
 
+# 效果预览
+
+![微信截图_20210413014438](https://user-images.githubusercontent.com/67500714/114439034-1bc62880-9bfb-11eb-9384-7ffbf8fd1184.png)
+
+
+![微信截图_20210413014456](https://user-images.githubusercontent.com/67500714/114439027-19fc6500-9bfb-11eb-88b2-440fa1b25bae.png)
+
 
 ## How to use
 
