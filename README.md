@@ -14,7 +14,9 @@ Stanford Encyclopedia of Philosophy user css
 ### 安装 Stylus
 
 [Stylus :: add0n.com](https://add0n.com/stylus.html)
+
 [openstyles/stylus: Stylus - Userstyles Manager](https://github.com/openstyles/stylus/)
+
 [Chrome网上应用店](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
 ### 在浏览器中
