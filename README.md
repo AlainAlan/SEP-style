@@ -34,6 +34,7 @@ Stanford Encyclopedia of Philosophy user css
 
 **目前仅使用Windows 10测试**
 > i.e. the `.css` only used several `font-family` currently available on my own PC
+> 
 > They are:
 > 
 > - Old English Text MT
@@ -55,6 +56,6 @@ Stanford Encyclopedia of Philosophy user css
 
 ### 后记
 
-在Windows下，默认的SEP词条正文是`serif`（等于什么都没说甚至于还不如不指定）。而默认的打印界面我记得是 sans serif，同样丑的不忍直视。于是乎，此前为了获得较为美观的SEP的pdf文档，一度安装了几个G的TeX套件，然后使用一个python2时代的爬虫工具（大佬写的：[mondain-dev/convert-sep: To generate tufte-book style document for Stanford Encyclopedia of Philosophy (SEP) entries.](https://github.com/mondain-dev/convert-sep)）转为`.tex`然后转为pdf。虽然好看但是仍有些许瑕疵（左对齐导致的右侧参差、另页尾注导致的崩溃、图片支持度太差且大小需要手动调整，以及塔夫特式的排版的原生争议，以及xelatex本身的发际线不友好问题）。最近灵光一闪，在没有认真学习css的情况下使用“检查”-“Style”搭配WhatFont工具——（[WhatFont Tool](http://www.chengyinliu.com/whatfont.html#whatfont-install-bookmarklet)几经尝试写了一个本地css。
+在Windows下，默认的SEP词条正文是`serif`（等于什么都没说甚至于还不如不指定）。而默认的打印界面我记得是 sans serif，同样丑的不忍直视。于是乎，此前为了获得较为美观的SEP的pdf文档，一度安装了几个G的TeX套件，然后使用一个python2时代的爬虫工具（大佬写的：[mondain-dev/convert-sep](https://github.com/mondain-dev/convert-sep)）转为`.tex`然后转为pdf。虽然好看但是仍有些许瑕疵（左对齐导致的右侧参差、另页尾注导致的崩溃、图片支持度太差且大小需要手动调整，以及塔夫特式的排版的原生争议，以及xelatex本身的发际线不友好问题）。最近灵光一闪，在没有认真学习css的情况下使用“检查”-“Style”搭配[WhatFont Tool](http://www.chengyinliu.com/whatfont.html#whatfont-install-bookmarklet)几经尝试写了一个本地css。
 
 希望以后可以老老实实读文献。
