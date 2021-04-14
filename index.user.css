@@ -1,78 +1,137 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.1
-@description    A new userstyle
+@version        0.0.2
+@description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平
 @author         Alain
 ==/UserStyle== */
-@-moz-document domain("stanford.edu") {
-	/* 斯坦福哲学百科所有页面 */
-	.serif {
-		font-family: "Palatino Linotype", serif;
-	}
-	.sansserif {
-		font-family: "DFKai-SB";
-	}
-	/* 题头改好了 */
-	#text {
-		font-family: "Palatino Linotype";
-	}
-	body {
-		font-family: "Palatino Linotype";
-	}
+		@-moz-document domain("stanford.edu") {
+			/* 斯坦福哲学百科所有页面 */
+			.serif {
+				font-family: "Palatino Linotype", serif;
+			}
+			.sansserif {
+				font-family: "DFKai-SB";
+			}
+			/* 题头改好了 */
+			#text {
+				font-family: "Palatino Linotype";
+			}
+			body {
+				font-family: "Palatino Linotype";
+			}
 
-	/* 导航栏 */
-	.nav-collapse,
-	.navbar,
-	.btn-navbar {
-		font-family: "Palatino Linotype";
-	}
-	/* 导航栏按钮 */
-	#navigation button.btn-navbar {
-		font-family: "Palatino Linotype";
-	}
+			/* 导航栏 */
+			.nav-collapse,
+			.navbar,
+			.btn-navbar {
+				font-family: "Palatino Linotype";
+			}
+			/* 导航栏按钮 */
+			#navigation button.btn-navbar {
+				font-family: "Palatino Linotype";
+			}
 
-	/* 搜索栏 */
-	#search-switch {
-		font-family: "Palatino Linotype", Arial, sans-serif;
-	}
-	#search input[type="search"] {
-		font-family: "Palatino Linotype", sans-serif;
-	}
-	#article-sidebar {
-		font-family: "Palatino Linotype";
-	}
-	/* 词条内容 */
-	#article-content,
-	#style_guide_content,
-	#style_guide_content_wide {
-		font-family: "Palatino Linotype";
-		font-size: 21px;
-		line-height: 1.8em;
-	}
-	/* 文章目录等 */
-	#article-content h2,
-	#article-content h3,
-	#style_guide_content h1,
-	#style_guide_content h2,
-	#style_guide_content h3,
-	#style_guide_content_wide h1,
-	#style_guide_content_wide h2,
-	#style_guide_content_wide h3 {
-		font-family: "Palatino Linotype";
-	}
+			/* 搜索栏 */
+			#search-switch {
+				font-family: "Palatino Linotype", Arial, sans-serif;
+			}
+			#search input[type="search"] {
+				font-family: "Palatino Linotype", sans-serif;
+			}
+			#article-sidebar {
+				font-family: "Palatino Linotype";
+			}
+			/* 词条内容 */
+			#article-content,
+			#style_guide_content,
+			#style_guide_content_wide {
+				font-family: "Palatino Linotype";
+				font-size: 21px;
+				line-height: 1.8em;
+			}
+			/* 文章目录等 */
+			#article-content h2,
+			#article-content h3,
+			#style_guide_content h1,
+			#style_guide_content h2,
+			#style_guide_content h3,
+			#style_guide_content_wide h1,
+			#style_guide_content_wide h2,
+			#style_guide_content_wide h3 {
+				font-family: "Palatino Linotype";
+			}
 
-	#article-content h1 {
-		font-family: "Copperplate Gothic";
-	}
-	/* 网站题头 */
-	#site-title,
-	.homepage #site-title {
-		font-family: "Old English Text MT", Arial, sans-serif;
-	}
+			#article-content h1 {
+				font-family: "Copperplate Gothic";
+			}
+			/* 网站题头 */
+			#site-title,
+			.homepage #site-title {
+				font-family: "Old English Text MT", Arial, sans-serif;
+			}
 
-	li {
-		line-height: 1.3em;
-		font-family: Georgia;
-	}
-}
+			li {
+				line-height: 1.3em;
+				font-family: Georgia;
+			}
+
+			#preamble p:first-child {
+				margin-top: 2em;
+			}
+
+			#preamble p:first-line {
+				font-variant: small-caps;
+			}
+
+			#preamble p:first-child::first-letter {
+				font-family: "Parchment";
+				font-size: 400%;
+				float: left;
+				margin: 0em;
+				margin-top: 0.25em;
+			}
+
+
+			@media print {
+				a:link {
+					color: grey;
+					text-decoration: none;
+				}
+				p {
+					text-align: justify;
+					text-justify: auto;
+				}
+				h1 {
+					text-align: right;
+					font-weight: normal;
+				}
+				#site-title {
+					font-size: 2em;
+					text-align: right;
+				}
+				#site-logo img {
+					height: 180%;
+					max-width: 200%;
+					max-height: 200%;
+					vertical-align: top;
+				}
+				#article-content {
+					line-height: 1.5em;
+				}
+				#container {
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+				}
+				#header-wrapper {
+					border-bottom: 0px;
+					background-image: none;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+				#pubinfo {
+					font-size: 0.7em;
+				}
+			}
+		}
