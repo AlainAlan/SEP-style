@@ -23,6 +23,8 @@ Stanford Encyclopedia of Philosophy user css
 
 [点击链接安装](https://cdn.jsdelivr.net/gh/AlainAlan/SEP-style/index.user.css)
 
+[@main](https://cdn.jsdelivr.net/gh/AlainAlan/SEP-style@main/index.user.css)
+
 ### 打开SEP页面查看效果 Try an entry to see
 
 [Social Epistemology (Stanford Encyclopedia of Philosophy)](https://plato.stanford.edu/entries/epistemology-social/)
