@@ -5,133 +5,278 @@
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平
 @author         Alain
 ==/UserStyle== */
-		@-moz-document domain("stanford.edu") {
-			/* 斯坦福哲学百科所有页面 */
-			.serif {
-				font-family: "Palatino Linotype", serif;
-			}
-			.sansserif {
-				font-family: "DFKai-SB";
-			}
-			/* 题头改好了 */
-			#text {
-				font-family: "Palatino Linotype";
-			}
-			body {
-				font-family: "Palatino Linotype";
-			}
+@-moz-document domain("stanford.edu") {
+	/* 斯坦福哲学百科所有页面 */
+	.serif {
+		font-family: "Palatino Linotype", serif;
+	}
+	.sansserif {
+		font-family: "DFKai-SB";
+	}
+	/* 题头改好了 */
+	#text {
+		font-family: "Palatino Linotype";
+	}
+	body {
+		font-family: "Palatino Linotype";
+	}
 
-			/* 导航栏 */
-			.nav-collapse,
-			.navbar,
-			.btn-navbar {
-				font-family: "Palatino Linotype";
-			}
-			/* 导航栏按钮 */
-			#navigation button.btn-navbar {
-				font-family: "Palatino Linotype";
-			}
+	/* 导航栏 */
+	.nav-collapse,
+	.navbar,
+	.btn-navbar {
+		font-family: "Palatino Linotype";
+	}
+	/* 导航栏按钮 */
+	#navigation button.btn-navbar {
+		font-family: "Palatino Linotype";
+	}
 
-			/* 搜索栏 */
-			#search-switch {
-				font-family: "Palatino Linotype", Arial, sans-serif;
-			}
-			#search input[type="search"] {
-				font-family: "Palatino Linotype", sans-serif;
-			}
-			#article-sidebar {
-				font-family: "Palatino Linotype";
-			}
-			/* 词条内容 */
-			#article-content,
-			#style_guide_content,
-			#style_guide_content_wide {
-				font-family: "Palatino Linotype";
-				font-size: 21px;
-				line-height: 1.8em;
-			}
-			/* 文章目录等 */
-			#article-content h2,
-			#article-content h3,
-			#style_guide_content h1,
-			#style_guide_content h2,
-			#style_guide_content h3,
-			#style_guide_content_wide h1,
-			#style_guide_content_wide h2,
-			#style_guide_content_wide h3 {
-				font-family: "Palatino Linotype";
-			}
+	/* 搜索栏 */
+	#search-switch {
+		font-family: "Palatino Linotype", Arial, sans-serif;
+	}
+	#search input[type="search"] {
+		font-family: "Palatino Linotype", sans-serif;
+	}
+	#article-sidebar {
+		font-family: "Palatino Linotype";
+	}
+	/* 词条内容 */
+	#article-content,
+	#style_guide_content,
+	#style_guide_content_wide {
+		font-family: "Palatino Linotype";
+		font-size: 21px;
+		line-height: 1.8em;
+	}
+	/* 文章目录等 */
+	#article-content h2,
+	#article-content h3,
+	#style_guide_content h1,
+	#style_guide_content h2,
+	#style_guide_content h3,
+	#style_guide_content_wide h1,
+	#style_guide_content_wide h2,
+	#style_guide_content_wide h3 {
+		font-family: "Palatino Linotype";
+	}
 
-			#article-content h1 {
-				font-family: "Copperplate Gothic";
-			}
-			/* 网站题头 */
-			#site-title,
-			.homepage #site-title {
-				font-family: "Old English Text MT", Arial, sans-serif;
-			}
+	#article-content h1 {
+		font-family: "Copperplate Gothic";
+	}
+	/* 网站题头 */
+	#site-title,
+	.homepage #site-title {
+		font-family: "Old English Text MT", Arial, sans-serif;
+	}
+	/* 	参考文献、引文等 */
+	li {
+		line-height: 1.3em;
+		font-family: Georgia;
+	}
+	/* 导言段前 */
+	#preamble p:first-child {
+		margin-top: 2em;
+	}
+	/* 	导言首行小型大写字母（古典审美） */
+	#preamble p:first-line {
+		font-variant: small-caps;
+	}
+	/* 导言首字母花体、下沉（约两行）	 */
+	#preamble p:first-child::first-letter {
+		font-family: "Parchment";
+		font-size: 400%;
+		float: left;
+		margin: 0em;
+		margin-top: 0.25em;
+	}
 
-			li {
-				line-height: 1.3em;
-				font-family: Georgia;
-			}
-
-			#preamble p:first-child {
-				margin-top: 2em;
-			}
-
-			#preamble p:first-line {
-				font-variant: small-caps;
-			}
-
-			#preamble p:first-child::first-letter {
-				font-family: "Parchment";
-				font-size: 400%;
-				float: left;
-				margin: 0em;
-				margin-top: 0.25em;
-			}
-
-
-			@media print {
-				a:link {
-					color: grey;
-					text-decoration: none;
-				}
-				p {
-					text-align: justify;
-					text-justify: auto;
-				}
-				h1 {
-					text-align: right;
-					font-weight: normal;
-				}
-				#site-title {
-					font-size: 2em;
-					text-align: right;
-				}
-				#site-logo img {
-					height: 180%;
-					max-width: 200%;
-					max-height: 200%;
-					vertical-align: top;
-				}
-				#article-content {
-					line-height: 1.5em;
-				}
-				#container {
-					-webkit-box-shadow: none;
-					-moz-box-shadow: none;
-					box-shadow: none;
-				}
-				#header-wrapper {
-					border-bottom: 0px;
-					background-image: none;
-					padding-bottom: 0;
-					margin-bottom: 0;
-				}
-				#pubinfo {
-					font-size: 0.7em;
-				}
-			}
+	/* 打印页面设置	 */
+	/* url颜色改为灰色 */
+	@media print {
+		a:link {
+			color: grey;
+			text-decoration: none;
 		}
+		/* 		改善文本换行和右侧锯齿排版（网页不处理，打印要求更高） */
+		p {
+			text-align: justify;
+			text-justify: auto;
+		}
+		/* 		文章标题右对齐 */
+		h1 {
+			text-align: center;
+			font-weight: normal;
+			line-height: 1;
+		}
+		/* 		调整大标题 */
+		#site-title {
+			font-size: 2em;
+			text-align: right;
+		}
+		/* 		调整logo */
+		#site-logo img {
+			height: 180%;
+			max-width: 200%;
+			max-height: 200%;
+			vertical-align: top;
+		}
+		/* 		打印之后行距要缩小一些，一点五em */
+		#article-content {
+			line-height: 1.5em;
+		}
+		/* 		以下来自原css @media对于屏幕宽度的控制 */
+		/* 		此处选用最窄时的配置，以避免宽屏设置下的莫名其妙的悬挂缩进 */
+		a.jump-to-top {
+			float: none;
+			display: block;
+		}
+		/****/
+		#header-wrapper #site-title {
+			font-size: 1.5em;
+		}
+		/****/
+		h1,
+		.pagetitle {
+			font-size: 2em;
+		}
+		.is-sticky #toc-nav {
+			max-width: 93%;
+			left: 3.5%;
+		}
+		#mission p.lead {
+			font-size: 1.2em;
+		}
+		#footer {
+			text-align: center;
+		}
+		#site-credits,
+		.menu-block,
+		#mirror-info,
+		#mirrors .btn-group {
+			width: 100%;
+			padding-left: 0;
+		}
+		.menu-block {
+			border-bottom: 1px solid #d8d8d8;
+			margin-bottom: 1em;
+			padding-bottom: 1.5em;
+		}
+		#mirrors .btn,
+		.btn-group > .dropdown-menu {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 100%;
+		}
+		#mirrors {
+			margin-bottom: 1em;
+		}
+		#mirrors .btn .caret {
+			float: right;
+			left: 0;
+			margin: 0 10px 0 0;
+			top: 0;
+		}
+		#mirrors a {
+			width: auto;
+		}
+		#article-sidebar .is-sticky .sticky {
+			width: 93%;
+			left: 3.5%;
+		}
+		.result_url {
+			visibility: hidden;
+			line-height: 0;
+		}
+		/* 		打印时选用Garamond，可以保证文末---连在一起 */
+		/* 		而且意大利体非常优雅 */
+		li {
+			font-family: "Garamond";
+		}
+	}
+	/* 		版本信息，缩小一些 */
+	#pubinfo {
+		font-size: 0.7em;
+	}
+	/* 		不打印捐赠说明 */
+	#article-banner-content {
+		display: none;
+	}
+	/* 		不打印文末的图片和其他信息 */
+	#site-credits {
+		display: none;
+	}
+	/* 		不打印相关词条等（这些词条在网页上有用，但都已经决定打印了，没必要保留 */
+	#academic-tools,
+	#other-internet-resources,
+	#related-entries {
+		display: none;
+	}
+}
+
+
+
+@-moz-document domain("mephilosophy.ccu.edu.tw") {
+	/* 强行搭售华文哲学百科css */
+	body {
+		font-family: "Book Antiqua", "PMingLiU", "DFKai-SB";
+	}
+	span {
+		font-family: "Book Antiqua", "DFKai-SB", "PMingLiU"!important;
+		font-size: 1.3em;
+		line-height: 1.5;
+	}
+	#entry_subject_text {
+		font-family: Georgia, "方正姚体";
+		font-variant: small-caps;
+		font-size: 2em;
+	}
+	.entry_subtitle {
+		font-size: 1.5em!important;
+	}
+	.menu_link {
+		font-family: "PMingLiU"!important;
+	}
+	/* 	这程序员也太菜了吧，把一切style都写死了避免我修改是吗 */
+	/* 	这么复杂的选择器，然后还多亏了!important */
+	#entry_list_div > p > a > span {
+		font-size: 18px!important;
+		color: black;
+	}
+	.entry_sub_title {
+		font-family: "DFKai-SB"!important;
+		font-size: 2.5em!important;
+	}
+	@media print {
+
+		.menu_small_bar_title,
+		.menu_small_bar {
+			display: none;
+		}
+		.main-size {
+			display: none;
+		}
+		.side {
+			display: none;
+			/* 			overflow: hidden; */
+		}
+		.center {
+			margin: auto;
+			width: 100vw;
+		}
+		.content {
+			padding-left: 0em;
+			padding-right: 0em;
+		}
+		span {
+			font-family: "Garamond", "PMingLiU"!important;
+			font-size: 1.0em;
+			line-height: 1.5;
+		}
+		.main_menu_button {
+			display: none;
+		}
+	}
+}
