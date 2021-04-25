@@ -81,3 +81,7 @@ Stanford Encyclopedia of Philosophy user css
   - 调整了CEP的域名（仅适用于词条页面，其他页面不修改，不免了0.0.3版本的问题）
   - 调整了CEP的打印字体大小（18px被用无处不在的style写定我也没有办法）
   - 调整了CEP的引用（华文仿宋） 
+  - 效果预览
+   - ![龙树2](https://user-images.githubusercontent.com/67500714/115986348-54460900-a5e2-11eb-91b7-27702cf74ea4.png)![龙树](https://user-images.githubusercontent.com/67500714/115986340-4ee8be80-a5e2-11eb-99c4-2f6cfa2020dc.png)
+   - ![虚拟打印](https://user-images.githubusercontent.com/67500714/115986352-58722680-a5e2-11eb-9d7e-579243c73896.png)![虚拟列印](https://user-images.githubusercontent.com/67500714/115986368-645de880-a5e2-11eb-9faf-6ad8ce673c10.png)
+ 
