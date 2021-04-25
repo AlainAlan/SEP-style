@@ -231,7 +231,7 @@
 	#entry_subject_text {
 		font-family: Georgia, "方正姚体";
 		font-variant: small-caps;
-		font-size: 2em;
+		font-size: 28px;
 	}
 	/* 	#entry_list_div { */
 	/* 		font-family: "Book Antiqua","DFKai-SB"!important; */
@@ -293,6 +293,9 @@
 			/* 			font-size: 1em!important; */
 
 		}
+			#entry_subject_text {
+		font-size: 28px!important;
+	}
 		.main_menu_button {
 			display: none;
 		}
