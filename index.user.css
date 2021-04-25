@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.3
+@version        0.0.4
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平；另外也可用於美化中國台灣“華文哲學百科”的頁面和列印頁面。
 @author         Alain
 ==/UserStyle== */
@@ -218,14 +218,14 @@
 
 
 
-@-moz-document domain("mephilosophy.ccu.edu.tw") {
+@-moz-document regexp("^http?://mephilosophy\\.ccu\\.edu\\.tw/entry\\.php\\?entry_name.+") {
 	/* 强行搭售华文哲学百科css */
 	body {
-		font-family: "Book Antiqua", "PMingLiU", "DFKai-SB";
+		font-family: "Book Antiqua", "DFKai-SB";
 	}
 	span {
 		font-family: "Book Antiqua", "DFKai-SB", "PMingLiU"!important;
-		font-size: 1.3em;
+		font-size: 18px!important;
 		line-height: 1.5;
 	}
 	#entry_subject_text {
@@ -233,21 +233,29 @@
 		font-variant: small-caps;
 		font-size: 2em;
 	}
+	/* 	#entry_list_div { */
+	/* 		font-family: "Book Antiqua","DFKai-SB"!important; */
+	/* 	} */
 	.entry_subtitle {
-		font-size: 1.5em!important;
+		font-size: 1em!important;
 	}
 	.menu_link {
 		font-family: "PMingLiU"!important;
 	}
 	/* 	这程序员也太菜了吧，把一切style都写死了避免我修改是吗 */
 	/* 	这么复杂的选择器，然后还多亏了!important */
-	#entry_list_div > p > a > span {
-		font-size: 18px!important;
-		color: black;
+	#entry_list_div {
+		font-size: 1em!important;
+		/* 		color: black; */
 	}
+	/* 	上面這個也太難選了 */
 	.entry_sub_title {
 		font-family: "DFKai-SB"!important;
 		font-size: 2.5em!important;
+	}
+	#entry_content_div > blockquote > p > span > span > span > span {
+		font-family: "Garamond", "华文仿宋"!important;
+		font-size: 18px!important;
 	}
 	@media print {
 
@@ -270,10 +278,20 @@
 			padding-left: 0em;
 			padding-right: 0em;
 		}
+
 		span {
-			font-family: "Garamond", "PMingLiU"!important;
-			font-size: 1.0em;
+			font-size: 18px!important;
 			line-height: 1.5;
+			font-family: "Garamond", "PMingLiU"!important;
+		}
+		#entry_subject_text {
+			font-size: 1em;
+		}
+
+		#entry_navigation_div > p > span > strong {
+			font-family: "Garamond", "DFKai-SB";
+			/* 			font-size: 1em!important; */
+
 		}
 		.main_menu_button {
 			display: none;
