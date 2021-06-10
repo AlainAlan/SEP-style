@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.4
+@version        0.0.5
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平；另外也可用於美化中國台灣“華文哲學百科”的頁面和列印頁面。
 @author         Alain
 ==/UserStyle== */
@@ -73,14 +73,14 @@
 	/* 	参考文献、引文等 */
 	li {
 		line-height: 1.3em;
-		font-family: Georgia;
+		font-family: "Garamond";
 	}
 	/* 导言段前 */
 	#preamble p:first-child {
 		margin-top: 2em;
 	}
 	/* 	导言首行小型大写字母（古典审美） */
-	#preamble p:first-line {
+	#preamble p:first-child:first-line {
 		font-variant: small-caps;
 	}
 	/* 导言首字母花体、下沉（约两行）	 */
@@ -229,7 +229,7 @@
 		line-height: 1.5;
 	}
 	#entry_subject_text {
-		font-family: Georgia, "方正姚体";
+		font-family: "方正姚体";
 		font-variant: small-caps;
 		font-size: 28px;
 	}
