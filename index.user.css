@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.9
+@version        0.1.0
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平；另外也可用於美化中國台灣“華文哲學百科”的頁面和列印頁面。
 @author         Alain
 ==/UserStyle== */
@@ -93,7 +93,15 @@
 	}
 
 	/* 打印页面设置	 */
-	/* url颜色改为灰色 */
+	/* url颜色改为黑色 */
+	@page {
+    size: A4;
+    margin-left: 25mm;
+		margin-right: 25mm;
+		margin-top: 25mm;
+		margin-bottom: 30mm;
+}
+	}
 	@media print {
 		a:link {
 			color: grey;
@@ -215,12 +223,11 @@
 	#related-entries {
 		display: none;
 	}
-	.article-copyright {
-
-		text-align: center;
+	#article-copyright > p {
+		text-align: center!important;
 	}
 
-}
+
 
 
 	@-moz-document regexp("^http?://mephilosophy\\.ccu\\.edu\\.tw/entry\\.php\\?entry_name.+") {
