@@ -1,35 +1,35 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.7
+@version        0.0.9
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平；另外也可用於美化中國台灣“華文哲學百科”的頁面和列印頁面。
 @author         Alain
 ==/UserStyle== */
 @-moz-document domain("stanford.edu") {
 	/* 斯坦福哲学百科所有页面 */
 	.serif {
-		font-family: "Palatino Linotype","Book Antiqua", Palatino, serif;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, 'DFKai-SB', serif;
 	}
 	.sansserif {
 		font-family: "DFKai-SB";
 	}
 	/* 题头改好了 */
 	#text {
-		font-family: "Palatino Linotype","Book Antiqua", Palatino;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, 'DFKai-SB';
 	}
 	body {
-		font-family: "Palatino Linotype","Book Antiqua", Palatino;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, '华文中宋';
 	}
 
 	/* 导航栏 */
 	.nav-collapse,
 	.navbar,
 	.btn-navbar {
-		font-family: "Palatino Linotype","Book Antiqua", Palatino;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, '华文中宋';
 	}
 	/* 导航栏按钮 */
 	#navigation button.btn-navbar {
-		font-family: "Palatino Linotype","Book Antiqua", Palatino;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, '华文中宋';
 	}
 
 	/* 搜索栏 */
@@ -40,13 +40,13 @@
 		font-family: "Palatino Linotype", sans-serif;
 	}
 	#article-sidebar {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype",'DFKai-SB';
 	}
 	/* 词条内容 */
 	#article-content,
 	#style_guide_content,
 	#style_guide_content_wide {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype",'华文中宋';
 		font-size: 21px;
 		line-height: 1.8em;
 	}
@@ -59,7 +59,7 @@
 	#style_guide_content_wide h1,
 	#style_guide_content_wide h2,
 	#style_guide_content_wide h3 {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype",'DFKai-SB';
 	}
 
 	#article-content h1 {
@@ -73,7 +73,7 @@
 	/* 	参考文献、引文等 */
 	li {
 		line-height: 1.3em;
-		font-family: "Garamond";
+		font-family: "Garamond",'华文宋体';
 	}
 	/* 导言段前 */
 	#preamble p:first-child {
@@ -117,7 +117,7 @@
 		}
 		/* 		调整logo */
 		#site-logo img {
-/* 			height: 180%;
+			/* 			height: 180%;
 			max-width: 200%;
 			max-height: 200%;
 			vertical-align: top; */
@@ -215,98 +215,102 @@
 	#related-entries {
 		display: none;
 	}
+	.article-copyright {
+
+		text-align: center;
+	}
+
 }
 
 
-
-@-moz-document regexp("^http?://mephilosophy\\.ccu\\.edu\\.tw/entry\\.php\\?entry_name.+") {
-	/* 强行搭售华文哲学百科css */
-	body {
-		font-family: "Book Antiqua", "DFKai-SB";
-	}
-	span {
-		font-family: "Book Antiqua", "DFKai-SB", "PMingLiU"!important;
-		font-size: 18px!important;
-		line-height: 1.5;
-	}
-	#entry_subject_text {
-		font-family: "Bodoni MT", "方正姚体";
-		/* 		font-variant: small-caps; */
-		font-size: 28px;
-	}
-	/* 	#entry_list_div { */
-	/* 		font-family: "Book Antiqua","DFKai-SB"!important; */
-	/* 	} */
-	.entry_subtitle {
-		font-size: 1em!important;
-	}
-	.menu_link {
-		font-family: "PMingLiU"!important;
-	}
-	/* 	这程序员也太菜了吧，把一切style都写死了避免我修改是吗 */
-	/* 	这么复杂的选择器，然后还多亏了!important */
-	#entry_list_div {
-		font-size: 1em!important;
-		/* 		color: black; */
-	}
-	/* 	上面這個也太難選了 */
-	.entry_sub_title {
-		font-family: "DFKai-SB"!important;
-		font-size: 2.5em!important;
-	}
-	#entry_content_div > blockquote > p > span > span > span > span {
-		font-family: "Garamond", "华文仿宋"!important;
-		font-size: 18px!important;
-	}
-	#entry_navigation_div > p > span > strong {
-		font-family: "Garamond", "DFKai-SB"!important;
-		font-size: 1.5em;
-		font-style: normal;
-		/* 			font-size: 1em!important; */
-	}
-	@media print {
-
-		.menu_small_bar_title,
-		.menu_small_bar {
-			display: none;
+	@-moz-document regexp("^http?://mephilosophy\\.ccu\\.edu\\.tw/entry\\.php\\?entry_name.+") {
+		/* 强行搭售华文哲学百科css */
+		body {
+			font-family: "Book Antiqua", "DFKai-SB";
 		}
-		.main-size {
-			display: none;
-		}
-		.side {
-			display: none;
-			/* 			overflow: hidden; */
-		}
-		.center {
-			margin: auto;
-			width: 100vw;
-		}
-		.content {
-			padding-left: 0em;
-			padding-right: 0em;
-		}
-
 		span {
+			font-family: "Book Antiqua", "DFKai-SB", "PMingLiU"!important;
 			font-size: 18px!important;
 			line-height: 1.5;
-			font-family: "Garamond", "PMingLiU"!important;
 		}
 		#entry_subject_text {
-			font-size: 1em;
+			font-family: "Bodoni MT", "方正姚体";
+			/* 		font-variant: small-caps; */
+			font-size: 28px;
 		}
-
+		/* 	#entry_list_div { */
+		/* 		font-family: "Book Antiqua","DFKai-SB"!important; */
+		/* 	} */
+		.entry_subtitle {
+			font-size: 1em!important;
+		}
+		.menu_link {
+			font-family: "PMingLiU"!important;
+		}
+		/* 	这程序员也太菜了吧，把一切style都写死了避免我修改是吗 */
+		/* 	这么复杂的选择器，然后还多亏了!important */
+		#entry_list_div {
+			font-size: 1em!important;
+			/* 		color: black; */
+		}
+		/* 	上面這個也太難選了 */
+		.entry_sub_title {
+			font-family: "DFKai-SB"!important;
+			font-size: 2.5em!important;
+		}
+		#entry_content_div > blockquote > p > span > span > span > span {
+			font-family: "Garamond", "华文仿宋"!important;
+			font-size: 18px!important;
+		}
 		#entry_navigation_div > p > span > strong {
-			font-family: "Garamond", "DFKai-SB";
+			font-family: "Garamond", "DFKai-SB"!important;
+			font-size: 1.5em;
+			font-style: normal;
 			/* 			font-size: 1em!important; */
 		}
-		#entry_subject_text {
-			font-size: 28px!important;
-		}
-		.main_menu_button {
-			display: none;
-		}
-		#foot {
-			display: none;
+		@media print {
+
+			.menu_small_bar_title,
+			.menu_small_bar {
+				display: none;
+			}
+			.main-size {
+				display: none;
+			}
+			.side {
+				display: none;
+				/* 			overflow: hidden; */
+			}
+			.center {
+				margin: auto;
+				width: 100vw;
+			}
+			.content {
+				padding-left: 0em;
+				padding-right: 0em;
+			}
+
+			span {
+				font-size: 18px!important;
+				line-height: 1.5;
+				font-family: "Garamond", "PMingLiU"!important;
+			}
+			#entry_subject_text {
+				font-size: 1em;
+			}
+
+			#entry_navigation_div > p > span > strong {
+				font-family: "Garamond", "DFKai-SB";
+				/* 			font-size: 1em!important; */
+			}
+			#entry_subject_text {
+				font-size: 28px!important;
+			}
+			.main_menu_button {
+				display: none;
+			}
+			#foot {
+				display: none;
+			}
 		}
 	}
-}
