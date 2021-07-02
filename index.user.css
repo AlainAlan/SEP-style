@@ -1,35 +1,35 @@
 /* ==UserStyle==
 @name           斯坦福哲学百科全书styler
 @namespace      https://github.com/AlainAlan/SEP-style/
-@version        0.0.5
+@version        0.0.7
 @description    用於美化斯坦福哲學百科的網頁頁面，以及使虛擬列印的pdf文件達到基本可接受的水平；另外也可用於美化中國台灣“華文哲學百科”的頁面和列印頁面。
 @author         Alain
 ==/UserStyle== */
 @-moz-document domain("stanford.edu") {
 	/* 斯坦福哲学百科所有页面 */
 	.serif {
-		font-family: "Palatino Linotype", serif;
+		font-family: "Palatino Linotype","Book Antiqua", Palatino, serif;
 	}
 	.sansserif {
 		font-family: "DFKai-SB";
 	}
 	/* 题头改好了 */
 	#text {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype","Book Antiqua", Palatino;
 	}
 	body {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype","Book Antiqua", Palatino;
 	}
 
 	/* 导航栏 */
 	.nav-collapse,
 	.navbar,
 	.btn-navbar {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype","Book Antiqua", Palatino;
 	}
 	/* 导航栏按钮 */
 	#navigation button.btn-navbar {
-		font-family: "Palatino Linotype";
+		font-family: "Palatino Linotype","Book Antiqua", Palatino;
 	}
 
 	/* 搜索栏 */
@@ -106,7 +106,7 @@
 		}
 		/* 		文章标题右对齐 */
 		h1 {
-			text-align: center;
+			text-align: left;
 			font-weight: normal;
 			line-height: 1;
 		}
@@ -117,10 +117,11 @@
 		}
 		/* 		调整logo */
 		#site-logo img {
-			height: 180%;
+/* 			height: 180%;
 			max-width: 200%;
 			max-height: 200%;
-			vertical-align: top;
+			vertical-align: top; */
+			visibility: hidden;
 		}
 		/* 		打印之后行距要缩小一些，一点五em */
 		#article-content {
@@ -229,8 +230,8 @@
 		line-height: 1.5;
 	}
 	#entry_subject_text {
-		font-family: "方正姚体";
-		font-variant: small-caps;
+		font-family: "Bodoni MT", "方正姚体";
+		/* 		font-variant: small-caps; */
 		font-size: 28px;
 	}
 	/* 	#entry_list_div { */
@@ -256,6 +257,12 @@
 	#entry_content_div > blockquote > p > span > span > span > span {
 		font-family: "Garamond", "华文仿宋"!important;
 		font-size: 18px!important;
+	}
+	#entry_navigation_div > p > span > strong {
+		font-family: "Garamond", "DFKai-SB"!important;
+		font-size: 1.5em;
+		font-style: normal;
+		/* 			font-size: 1em!important; */
 	}
 	@media print {
 
@@ -291,12 +298,14 @@
 		#entry_navigation_div > p > span > strong {
 			font-family: "Garamond", "DFKai-SB";
 			/* 			font-size: 1em!important; */
-
 		}
-			#entry_subject_text {
-		font-size: 28px!important;
-	}
+		#entry_subject_text {
+			font-size: 28px!important;
+		}
 		.main_menu_button {
+			display: none;
+		}
+		#foot {
 			display: none;
 		}
 	}
