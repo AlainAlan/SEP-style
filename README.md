@@ -85,3 +85,12 @@ Stanford Encyclopedia of Philosophy user css
    - ![龙树2](https://user-images.githubusercontent.com/67500714/115986348-54460900-a5e2-11eb-91b7-27702cf74ea4.png)![龙树](https://user-images.githubusercontent.com/67500714/115986340-4ee8be80-a5e2-11eb-99c4-2f6cfa2020dc.png)
    - ![虚拟打印](https://user-images.githubusercontent.com/67500714/115986352-58722680-a5e2-11eb-9d7e-579243c73896.png)![虚拟列印](https://user-images.githubusercontent.com/67500714/115986368-645de880-a5e2-11eb-9faf-6ad8ce673c10.png)
  
+- 2021-07-02
+  - 调整了一些细节，但是仍然非常不稳定（打印时标题的缩进时有时无，字体大小也不稳定）
+  - 在@page里指定了页边距
+  - 加入了与Palatino搭配的华文中宋，和与Garamond搭配的华文宋体，以适配部分中国哲学相关词条中的中文字符
+  - 修复了在导言区出现引用块也被视为首段文字的bug
+  - 感觉目前审美上有些土，但是又懒得改，就这样吧，我知道我很土。
+
+- 2021-07-03
+  - 跑动了批量虚拟打印的代码，详见个人仓库（等我更新上传）
