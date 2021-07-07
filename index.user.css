@@ -96,7 +96,6 @@
         font-variant: normal!important;
         line-height: 1.3em;
         font-size: 1.1em
-        
     }
     #preamble blockquote > p:first-line {
         font-variant: normal!important;
@@ -108,9 +107,6 @@
     }
     /* 打印页面设置	 */
     /* url颜色改为黑色 */
-    
-    @media print {
-    
     a:link {
         color: black;
         text-decoration: none;
@@ -122,9 +118,12 @@
     }
     /* 		文章标题左对齐 */
     h1 {
-        text-align: left;
+        text-align: left!important;
+        margin: 0.1em 0em 0em!important;
         font-weight: normal;
-        line-height: 1;
+        line-height: 1.1;
+        font-size: 2em;
+        text-indent: 0px!important;
     }
     /* 		调整大标题 */
     #site-title {
@@ -133,20 +132,16 @@
     }
     /* 		调整logo */
     #site-logo img {
-        /* 			height: 180%;
-			max-width: 200%;
-			max-height: 200%;
-			vertical-align: top; */
         visibility: hidden;
     }
     /* 		打印之后行距要缩小一些，一点五em */
     #article-content {
-        line-height: 1.5em;
+        line-height: 1.5em!important;
     }
     /* 		以下来自原css @media对于屏幕宽度的控制 */
     /* 		此处选用最窄时的配置，以避免宽屏设置下的莫名其妙的悬挂缩进 */
     a.jump-to-top {
-        float: none;
+        float: none!important;
         display: block;
     }
     /****/
@@ -159,8 +154,7 @@
         font-size: 2em;
     }
     .is-sticky #toc-nav {
-        max-width: 93%;
-        left: 3.5%;
+        display: none;
     }
     #mission p.lead {
         font-size: 1.2em;
@@ -172,40 +166,40 @@
     .menu-block,
     #mirror-info,
     #mirrors .btn-group {
-        width: 100%;
-        padding-left: 0;
+        width: 100%!important;
+        padding-left: 0!important;
     }
     .menu-block {
         border-bottom: 1px solid #d8d8d8;
-        margin-bottom: 1em;
-        padding-bottom: 1.5em;
+        margin-bottom: 0em!important;
+        padding-bottom: 0em!important;
     }
     #mirrors .btn,
     .btn-group > .dropdown-menu {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 100%;
+        -webkit-box-sizing: border-box!important;
+        -moz-box-sizing: border-box!important;
+        box-sizing: border-box!important;
+        width: 100%!important;
     }
     #mirrors {
-        margin-bottom: 1em;
+        margin-bottom: 1em!important;
     }
     #mirrors .btn .caret {
         float: right;
-        left: 0;
-        margin: 0 10px 0 0;
-        top: 0;
+        left: 0!important;
+        margin: 0 10px 0 0!important;
+        top: 0!important;
     }
     #mirrors a {
         width: auto;
     }
     #article-sidebar .is-sticky .sticky {
-        width: 93%;
-        left: 3.5%;
+        width: 93%!important;
+        left: 3.5%!important;
     }
     .result_url {
         visibility: hidden;
-        line-height: 0;
+        line-height: 0!important;
     }
     /* 		打印时选用Garamond，可以保证文末---连在一起 */
     /* 		而且意大利体非常优雅 */
@@ -228,11 +222,38 @@
     #academic-tools,
     #other-internet-resources,
     #related-entries {
-        display: none;
+        display: none!important;
     }
     #article-copyright > p {
         text-align: center!important;
     }
+
+    .toc #content > a[id] {
+        padding-top: 18em!important;
+        margin-top: -18em!important;
+    }
+    .toc #content > a[id=a] {
+        padding-top: 20em!important;
+    }
+    #site-logo {
+        float: left;
+        margin-right: 0!important;
+        height: 0px!important;
+        margin-left: 0px!important;
+        margin-top: 0px!important;
+        width: 0px!important;
+        display: none!important;
+    }
+
+    @media print {
+        h1 {
+            margin: 1.5em 0em 0em!important;
+        }
+        #container {
+            padding: 0em 0 0em;
+        }
+    }
+
     @page {
         size: A4;
         margin-left: 25mm;
@@ -240,10 +261,7 @@
         margin-top: 25mm;
         margin-bottom: 30mm;
     }
-    
 }
-}
-
 
 @-moz-document regexp("^http?://mephilosophy\\.ccu\\.edu\\.tw/entry\\.php\\?entry_name.+") {
     /* 强行搭售华文哲学百科css */
